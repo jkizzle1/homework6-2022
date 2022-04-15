@@ -47,7 +47,7 @@ Log the current location of the video.*/
 /* Mute: Mute/unmute the video and update the text in the button.*/
 
 
-/* Volume Slider:Change the volume based on the slider and update the volume information.*/
+/* Volume Slider: Change the volume based on the slider and update the volume information.*/
 
 document.querySelector("#slider").addEventListener
 ("change", function() {
