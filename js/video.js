@@ -63,6 +63,18 @@ document.querySelector("#skip").addEventListener
 
 /* Mute: Mute/unmute the video and update the text in the button.*/
 
+document.querySelector("#mute").addEventListener
+("click", function(){
+	if (video.muted == false) {
+		video.muted = true;
+		document.querySelector("#mute").innerHTML = "Unmute"
+	}
+
+	else {
+		video.muted = false;
+		document.querySelector("#mute").innerHTML = "Mute"
+	}
+});
 
 /* Volume Slider: Change the volume based on the slider and update the volume information.*/
 
@@ -78,7 +90,7 @@ document.querySelector("#slider").addEventListener
 
 document.querySelector("#vintage").addEventListener("click", function() {
 	video.className = "oldSchool";
-	console.log("Styled the video to old school/black and white.")
+	console.log("Styled the video to vintage/black and white.")
 });
 
 
@@ -87,5 +99,5 @@ document.querySelector("#vintage").addEventListener("click", function() {
 document.querySelector("#orig").addEventListener
 ("click", function(){
 	video.classList.remove("oldSchool")
-	console.log("Removed oldSchool class to Original")
+	console.log("Removed vintage style back to original video")
 });
