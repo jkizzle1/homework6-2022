@@ -5,14 +5,13 @@ window.addEventListener("load", function() {
 
 });
 
-/* Play Button: Play the video and update the volume information.
-NOT FINISHED */ 
+/* Play Button: Play the video and update the volume information.*/ 
+
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
 	var val = document.getElementById("slider").value;
 	document.querySelector("#volume").innerHTML = val + "%";
-
 });
 
 /* Pause Button: Pause the video.*/
@@ -66,6 +65,8 @@ document.querySelector("#slider").addEventListener
 
 /*Original: Remove the oldSchool class from the video.*/
 
-
-
-
+document.querySelector("#org").addEventListener
+("click", function(){
+	video.classList.remove("oldSchool")
+	console.log("Removed oldSchool class")
+});
