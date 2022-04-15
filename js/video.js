@@ -27,7 +27,7 @@ the button is clicked and log the new speed to the console.  */
 document.querySelector("#slower").addEventListener
 ("click", function() {
 	video.playbackRate *= 0.95;
-	console.log("The new speed is" + video.playbackRate);
+	console.log("The new speed is " + video.playbackRate);
 });
 
 /* Speed Up: Increase the current video speed each time the button is clicked 
@@ -49,6 +49,12 @@ Log the current location of the video.*/
 
 /* Volume Slider:Change the volume based on the slider and update the volume information.*/
 
+document.querySelector("#slider").addEventListener
+("change", function() {
+	var val = document.getElementById("slider").value;
+	video.volume = val / 100;
+	document.querySelector("#volume").innerHTML = val + "%";
+});
 
 
 /* Styled: Utilize the existing oldSchool class on the video element*/
