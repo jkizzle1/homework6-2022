@@ -36,6 +36,7 @@ and log the new speed to the console.  Change it by an amount
 proportional to the slow down. CHECK THIS!!  If you slow down 
 three times and then speed up three times you should be within 
 5 digits of 100% again.*/
+
 document.querySelector("#faster").addEventListener
 ("click", function() {
 	video.playbackRate *= 1.05;
@@ -47,6 +48,17 @@ document.querySelector("#faster").addEventListener
 has been exceeded go back to the start of the video - no farther. 
 Log the current location of the video.*/
 
+document.querySelector("#skip").addEventListener
+("click", function(){
+	if (video.currentTime + 15 >= video.duration) {
+		video.currentTime = 0;
+	}
+
+	else{
+		console.log(video.currentTime);
+		video.currentTime += 15;
+	}
+});
 
 
 /* Mute: Mute/unmute the video and update the text in the button.*/
