@@ -5,6 +5,7 @@ window.addEventListener("load", function() {
 
 });
 
+/*Play Button: Play the video and update the volume information. */
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
@@ -18,4 +19,10 @@ document.querySelector("#pause").addEventListener
 	console.log("Pause Video");
 	video.pause();
 });
+
+/*Slow Down: Slow the current video speed by 5% each time 
+the button is clicked and log the new speed to the console.  */
+
+
+
 
