@@ -65,13 +65,16 @@ document.querySelector("#skip").addEventListener
 
 document.querySelector("#mute").addEventListener
 ("click", function(){
+	var volume = document.getElementById("slider").value / 100;
 	if (video.muted == false) {
 		video.muted = true;
+		video.volume = 0;
 		document.querySelector("#mute").innerHTML = "Unmute"
 	}
 
 	else {
 		video.muted = false;
+		video.volume = volume;
 		document.querySelector("#mute").innerHTML = "Mute"
 	}
 });
