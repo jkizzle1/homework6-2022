@@ -28,7 +28,7 @@ the button is clicked and log the new speed to the console.  */
 document.querySelector("#slower").addEventListener
 ("click", function() {
 	video.playbackRate *= 0.95;
-	console.log("The new speed is " + video.playbackRate);
+	console.log("New speed: " + video.playbackRate);
 });
 
 /* Speed Up: Increase the current video speed each time the button is clicked 
@@ -36,7 +36,11 @@ and log the new speed to the console.  Change it by an amount
 proportional to the slow down. CHECK THIS!!  If you slow down 
 three times and then speed up three times you should be within 
 5 digits of 100% again.*/
-
+document.querySelector("#faster").addEventListener
+("click", function() {
+	video.playbackRate *= 1.05;
+	console.log("New speed: " + video.playbackRate);
+});
 
 
 /* Skip Ahead: Advance the current video by 15 seconds.  If the video length 
@@ -60,7 +64,9 @@ document.querySelector("#slider").addEventListener
 
 /* Styled: Utilize the existing oldSchool class on the video element*/
 
-
+document.querySelector("#vintage").addEventListener("click", function() {
+	video.className = "oldSchool";
+});
 
 
 /*Original: Remove the oldSchool class from the video.*/
@@ -68,5 +74,5 @@ document.querySelector("#slider").addEventListener
 document.querySelector("#org").addEventListener
 ("click", function(){
 	video.classList.remove("oldSchool")
-	console.log("Removed oldSchool class")
+	console.log("Removed oldSchool class to Original")
 });
