@@ -10,6 +10,8 @@ NOT FINISHED */
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play();
+	var val = document.getElementById("slider").value;
+	document.querySelector("#volume").innerHTML = val + "%";
 
 });
 
