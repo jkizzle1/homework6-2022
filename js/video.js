@@ -78,12 +78,13 @@ document.querySelector("#slider").addEventListener
 
 document.querySelector("#vintage").addEventListener("click", function() {
 	video.className = "oldSchool";
+	console.log("Styled the video to old school/black and white.")
 });
 
 
 /*Original: Remove the oldSchool class from the video.*/
 
-document.querySelector("#org").addEventListener
+document.querySelector("#orig").addEventListener
 ("click", function(){
 	video.classList.remove("oldSchool")
 	console.log("Removed oldSchool class to Original")
